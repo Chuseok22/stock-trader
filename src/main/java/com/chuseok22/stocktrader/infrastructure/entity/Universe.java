@@ -1,6 +1,6 @@
 package com.chuseok22.stocktrader.infrastructure.entity;
 
-import com.chuseok22.stocktrader.core.Region;
+import com.chuseok22.stocktrader.core.constants.Region;
 import com.chuseok22.stocktrader.infrastructure.jpa.BasePostgresEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
