@@ -3,6 +3,7 @@ name: stock-trader-ci.yml
 on:
   pull_request:
     branches:
+      - main
       - test
 
 jobs:
