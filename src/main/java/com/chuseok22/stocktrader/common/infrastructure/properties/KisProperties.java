@@ -1,4 +1,4 @@
-package com.chuseok22.stocktrader.infrastructure.properties;
+package com.chuseok22.stocktrader.common.infrastructure.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

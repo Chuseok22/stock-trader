@@ -1,7 +1,7 @@
-package com.chuseok22.stocktrader.infrastructure.entity;
+package com.chuseok22.stocktrader.common.infrastructure.entity;
 
-import com.chuseok22.stocktrader.core.constants.Region;
-import com.chuseok22.stocktrader.infrastructure.jpa.BasePostgresEntity;
+import com.chuseok22.stocktrader.common.core.constants.Region;
+import com.chuseok22.stocktrader.common.infrastructure.jpa.BasePostgresEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -9,9 +9,9 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
-import java.time.LocalDate;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -25,10 +25,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(
-    name = "universe",
-    uniqueConstraints = @UniqueConstraint(name = "uq_universe_region_date", columnNames = {"region", "snapshot_date"})
+    name = "stock",
+    uniqueConstraints = @UniqueConstraint(name = "uq_stock_region_code", columnNames = {"region", "code"}),
+    indexes = {
+        @Index(name = "ix_stock_region_active_code", columnList = "region,active,code")
+    }
 )
-public class Universe extends BasePostgresEntity {
+public class Stock extends BasePostgresEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,14 +39,14 @@ public class Universe extends BasePostgresEntity {
 
   @Enumerated(EnumType.STRING)
   @Column(nullable = false)
-  private Region region;
+  private Region region; // KR, US
 
   @Column(nullable = false)
-  private int size; // 포함 종목 수
-
-  @Column(name = "snapshot_date", nullable = false)
-  private LocalDate snapshotDate; // 스냅샷 기준일
+  private String code;
 
   @Column(nullable = false)
-  private String ruleVersion;
+  private String name;
+
+  @Column(nullable = false)
+  private boolean active;
 }

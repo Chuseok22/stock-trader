@@ -1,6 +1,6 @@
-package com.chuseok22.stocktrader.infrastructure.entity;
+package com.chuseok22.stocktrader.common.infrastructure.entity;
 
-import com.chuseok22.stocktrader.infrastructure.jpa.BasePostgresEntity;
+import com.chuseok22.stocktrader.common.infrastructure.jpa.BasePostgresEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;

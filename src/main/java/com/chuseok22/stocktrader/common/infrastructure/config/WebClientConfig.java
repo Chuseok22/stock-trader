@@ -1,7 +1,7 @@
-package com.chuseok22.stocktrader.infrastructure.config;
+package com.chuseok22.stocktrader.common.infrastructure.config;
 
-import com.chuseok22.stocktrader.infrastructure.properties.AnalyticsProperties;
-import com.chuseok22.stocktrader.infrastructure.properties.KisProperties;
+import com.chuseok22.stocktrader.common.infrastructure.properties.AnalyticsProperties;
+import com.chuseok22.stocktrader.common.infrastructure.properties.KisProperties;
 import java.time.Duration;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;

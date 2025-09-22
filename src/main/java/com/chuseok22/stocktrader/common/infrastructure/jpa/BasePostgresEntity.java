@@ -1,4 +1,4 @@
-package com.chuseok22.stocktrader.infrastructure.jpa;
+package com.chuseok22.stocktrader.common.infrastructure.jpa;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
