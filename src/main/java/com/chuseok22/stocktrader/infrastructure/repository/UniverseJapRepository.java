@@ -1,8 +1,0 @@
-package com.chuseok22.stocktrader.infrastructure.repository;
-
-import com.chuseok22.stocktrader.infrastructure.entity.Universe;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface UniverseJapRepository extends JpaRepository<Universe, Long> {
-
-}

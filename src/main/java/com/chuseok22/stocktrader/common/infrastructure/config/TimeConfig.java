@@ -1,6 +1,6 @@
-package com.chuseok22.stocktrader.infrastructure.config;
+package com.chuseok22.stocktrader.common.infrastructure.config;
 
-import com.chuseok22.stocktrader.infrastructure.properties.TimeZoneProperties;
+import com.chuseok22.stocktrader.common.infrastructure.properties.TimeZoneProperties;
 import java.time.Clock;
 import java.time.ZoneId;
 import java.util.TimeZone;
